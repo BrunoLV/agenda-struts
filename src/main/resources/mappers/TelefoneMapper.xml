@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.valhala.agenda.persistencia.mapper.TelefoneMapper">
+
+    <resultMap type="Telefone" id="telefoneResultMapSemRelacionamento">
+        <id column="id_telefone" property="id"/>
+        <result column="codigo_telefone" property="codigo"/>
+        <result column="numero_telefone" property="numero"/>
+        <result column="tipo_telefone" property="tipo" typeHandler="org.apache.ibatis.type.EnumTypeHandler"/>
+    </resultMap>
+
+    <resultMap type="Telefone" id="telefoneResultMapComRelacionamento">
+        <id column="id_telefone" property="id"/>
+        <result column="codigo_telefone" property="codigo"/>
+        <result column="numero_telefone" property="numero"/>
+        <result column="tipo_telefone" property="tipo" typeHandler="org.apache.ibatis.type.EnumTypeHandler"/>
+        <association property="contato" column="id_contato" javaType="Contato">
+            <id column="id_contato" property="id"/>
+            <result column="nome_contato" property="nome"/>
+        </association>
+    </resultMap>
+
+    <insert id="inserirTelefone" parameterType="Telefone" keyProperty="id" useGeneratedKeys="true">
+        INSERT INTO tb_telefones (codigo_telefone, numero_telefone, tipo_telefone, id_contato)
+        VALUES (#{codigo}, #{numero}, #{tipo}, #{contato.id})
+    </insert>
+
+    <update id="atualizarTelefone" parameterType="Telefone">
+        UPDATE tb_telefones SET codigo_telefone = #{codigo}, numero_telefone = #{numero}, tipo_telefone = #{tipo}
+        WHERE id_telefone = #{id}
+    </update>
+
+    <delete id="removerTelefone" parameterType="java.lang.Integer">
+        DELETE FROM tb_telefones WHERE id_telefone = #{id}
+    </delete>
+
+    <delete id="removerTelefonesDeUmContato" parameterType="java.lang.Integer">
+        DELETE FROM tb_telefones WHERE id_contato = #{idContato}
+    </delete>
+
+    <select id="selecionarTodosTelefonesSemRelacionamento" resultMap="telefoneResultMapSemRelacionamento">
+        SELECT * FROM tb_telefones
+    </select>
+
+    <select id="buscarTodosOsTelefonesDeUmContato" resultMap="telefoneResultMapSemRelacionamento">
+        SELECT * FROM tb_telefones
+        WHERE id_contato = #{idContato}
+    </select>
+
+    <select id="selecionarTelefonePorIdSemRelacionamento" parameterType="java.lang.Integer"
+            resultMap="telefoneResultMapSemRelacionamento">
+        SELECT * FROM tb_telefones
+        WHERE id_telefone = #{id}
+    </select>
+
+    <select id="selecionarTelefonePorIdComRelacionamento" parameterType="java.lang.Integer"
+            resultMap="telefoneResultMapComRelacionamento">
+        SELECT t.*, c.* FROM tb_telefones t
+        LEFT OUTER JOIN tb_contatos c ON t.id_contato = c.id_contato
+        WHERE id_telefone = #{id}
+    </select>
+
+</mapper>

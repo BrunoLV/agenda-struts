@@ -1,0 +1,87 @@
+p.messages {
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    font-size: smaller;
+}
+
+p.error {
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    font-size: smaller;
+}
+
+p.errorComBorda{
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    font-size: smaller;
+    border: 1px solid steelblue;
+}
+
+table, td {
+    border: 1px solid steelblue;
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    font-size: smaller;
+}
+
+.tableForm {
+    border: none;
+    padding: 1px;
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    font-size: smaller;
+    color: black;
+}
+
+.textForm {
+    border: 1px dashed darkblue;
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    font-size: smaller;
+    color: black;
+}
+
+th {
+    border: none;
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    font-size: smaller;
+    color: white;
+    background-color: darkblue;
+}
+
+h1 {
+    border: 1px dashed darkblue;
+    background-color: cornflowerblue;
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+h3 {
+    border: none;
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    color: darkblue;
+}
+
+h6 {
+    border: 1px dashed darkblue;
+    background-color: cornflowerblue;
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+h3.subTitulo {
+    border: none;
+    background-color: darkblue;
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    color: white;
+}
+
+h4.erro {
+    border: none;
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    color: red;
+}
+
+.buttonAcoes {
+    border: 1px solid darkblue;
+    background-color: cornflowerblue;
+    font-family: "Segoe UI", Verdana, Arial, sans-serif;
+    font-size: smaller;
+    color: white;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
+
+<tiles-definitions>
+    <definition name="layout" template="/template/layout.jsp">
+        <put name="header" value="/template/header.jsp"/>
+        <put name="footer" value="/template/footer.jsp"/>
+        <putList name="styleSheets">
+            <add value="/css/estilo.css" />
+        </putList>
+        <putList name="javaScripts">
+            <add value="/script/scripts.js" />
+        </putList>
+    </definition>
+
+    <definition name="layout-detalhe-contato" template="/template/layout-detalhe-contato.jsp">
+        <put name="header" value="/template/header.jsp"/>
+        <put name="footer" value="/template/footer.jsp"/>
+        <putList name="styleSheets">
+            <add value="/css/estilo.css" />
+        </putList>
+        <putList name="javaScripts">
+            <add value="/script/scripts.js" />
+        </putList>
+    </definition>
+</tiles-definitions>

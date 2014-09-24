@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+    <!-- Configuração de form beans da aplicação. -->
+    <form-beans>
+        <form-bean name="contatoActionForm"
+                   type="com.valhala.agenda.web.forms.ContatoActionForm"/>
+        <form-bean name="telefoneActionForm"
+                   type="com.valhala.agenda.web.forms.TelefoneActionForm"/>
+    </form-beans>
+
+    <global-exceptions>
+        <exception type="java.lang.Exception"
+                   key="errors.global.mesage"
+                   handler="com.valhala.agenda.web.handlers.CustomExceptionHandler"
+                   path="/pages-tiles/pagina-erro.jsp" />
+    </global-exceptions>
+
+    <!-- Configuração das Actions -->
+    <action-mappings>
+
+        <!--
+        Actions para manipulacao de contatos.
+        -->
+        <action path="/listar"
+                type="com.valhala.agenda.web.action.ListagemContatosAction"
+                name="contatoActionForm"
+                validate="false">
+            <forward name="SUCESSO" path="/pages-tiles/listagem-contatos.jsp"/>
+        </action>
+
+        <action path="/novo"
+                type="org.apache.struts.actions.ForwardAction"
+                parameter="/pages-tiles/cadastro-contato.jsp"/>
+
+        <action path="/salvar-contato"
+                type="com.valhala.agenda.web.action.ManipulacaoContatosAction"
+                name="contatoActionForm"
+                validate="true"
+                input="/pages-tiles/cadastro-contato.jsp">
+            <forward name="INSERCAO_SUCESSO" path="/listar.do"/>
+            <forward name="EDICAO_SUCESSO" path="/listar.do"/>
+        </action>
+
+        <action path="/editar-contato"
+                type="com.valhala.agenda.web.action.ManipulacaoContatosAction"
+                name="contatoActionForm"
+                validate="false">
+            <forward name="PREPARACAO_SUCESSO" path="/pages-tiles/cadastro-contato.jsp"/>
+        </action>
+
+        <action path="/detalhar-contato"
+                type="com.valhala.agenda.web.action.ManipulacaoContatosAction"
+                name="contatoActionForm"
+                validate="false">
+            <forward name="DETALHE_SUCESSO" path="/pages-tiles/detalhe-contato.jsp"/>
+        </action>
+
+        <action path="/remover-contato"
+                type="com.valhala.agenda.web.action.ManipulacaoContatosAction"
+                name="contatoActionForm"
+                validate="false">
+            <forward name="REMOCAO_SUCESSO" path="/listar.do"/>
+        </action>
+
+        <!--
+        Actions para manipulacao de telefones.
+        -->
+        <action path="/novo-telefone"
+                type="org.apache.struts.actions.ForwardAction"
+                parameter="/pages-tiles/cadastro-telefones.jsp"/>
+
+        <action path="/salvar-telefone"
+                type="com.valhala.agenda.web.action.ManipulacaoTelefonesAction"
+                name="telefoneActionForm"
+                validate="true"
+                input="/pages-tiles/cadastro-telefones.jsp">
+            <forward name="INSERCAO_SUCESSO" path="/pages-tiles/detalhe-contato.jsp"/>
+            <forward name="EDICAO_SUCESSO" path="/pages-tiles/detalhe-contato.jsp"/>
+        </action>
+
+        <action path="/remover-telefone"
+                type="com.valhala.agenda.web.action.ManipulacaoTelefonesAction"
+                name="telefoneActionForm"
+                validate="false">
+            <forward name="REMOCAO_SUCESSO" path="/pages-tiles/detalhe-contato.jsp"/>
+        </action>
+
+        <action path="/editar-telefone"
+                type="com.valhala.agenda.web.action.ManipulacaoTelefonesAction"
+                name="telefoneActionForm"
+                validate="false">
+            <forward name="PREPARACAO_SUCESSO" path="/pages-tiles/cadastro-telefones.jsp" />
+        </action>
+
+    </action-mappings>
+
+    <!-- Configuração dos resources da aplicação -->
+    <message-resources parameter="resources"/>
+
+    <!-- Configuração do plugin do Tiles -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml"/>
+    </plug-in>
+
+    <!-- Configuração do plugin do Validator -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property property="pathnames"
+                      value="/WEB-INF/validator-rules.xml,
+                      /WEB-INF/validator-contato.xml,
+                      /WEB-INF/validator-telefone.xml"/>
+    </plug-in>
+
+</struts-config>
