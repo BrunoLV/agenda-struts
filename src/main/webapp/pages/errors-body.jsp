@@ -7,7 +7,9 @@
 <div>
     <p class="error"><html:errors /></p>
     <br/>
+    <logic:present name="mensagem">
     <p class="errorComBorda">
         <bean:write name="mensagem" />
     </p>
+    </logic:present>
 </div>
