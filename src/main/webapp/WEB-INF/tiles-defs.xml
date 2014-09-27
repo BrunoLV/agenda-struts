@@ -8,10 +8,10 @@
         <put name="header" value="/template/header.jsp"/>
         <put name="footer" value="/template/footer.jsp"/>
         <putList name="styleSheets">
-            <add value="/css/estilo.css" />
+            <add value="/css/estilo.css"/>
         </putList>
         <putList name="javaScripts">
-            <add value="/script/scripts.js" />
+            <add value="/script/scripts.js"/>
         </putList>
     </definition>
 
@@ -19,10 +19,10 @@
         <put name="header" value="/template/header.jsp"/>
         <put name="footer" value="/template/footer.jsp"/>
         <putList name="styleSheets">
-            <add value="/css/estilo.css" />
+            <add value="/css/estilo.css"/>
         </putList>
         <putList name="javaScripts">
-            <add value="/script/scripts.js" />
+            <add value="/script/scripts.js"/>
         </putList>
     </definition>
 </tiles-definitions>

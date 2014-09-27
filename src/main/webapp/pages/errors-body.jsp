@@ -5,11 +5,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <div>
-    <p class="error"><html:errors /></p>
+    <p class="error"><html:errors/></p>
     <br/>
     <logic:present name="mensagem">
-    <p class="errorComBorda">
-        <bean:write name="mensagem" />
-    </p>
+        <p class="errorComBorda">
+            <bean:write name="mensagem"/>
+        </p>
     </logic:present>
 </div>

@@ -7,12 +7,12 @@
     <formset>
         <form name="telefoneActionForm">
             <field property="codigo" depends="required, integer">
-                <msg key="errors.campo.requirido" name="required" />
-                <msg key="errors.campo.numerico" name="integer" />
-                
-                <arg name="required" key="${var:campoCodigo}" position="0" resource="false" />
-                <arg name="integer" key="${var:campoCodigo}" position="0" resource="false" />
-                
+                <msg key="errors.campo.requirido" name="required"/>
+                <msg key="errors.campo.numerico" name="integer"/>
+
+                <arg name="required" key="${var:campoCodigo}" position="0" resource="false"/>
+                <arg name="integer" key="${var:campoCodigo}" position="0" resource="false"/>
+
                 <var>
                     <var-name>campoCodigo</var-name>
                     <var-value>CODIGO</var-value>
@@ -20,11 +20,11 @@
             </field>
 
             <field property="numero" depends="required, integer">
-                <msg key="errors.campo.requirido" name="required" />
-                <msg key="errors.campo.numerico" name="integer" />
+                <msg key="errors.campo.requirido" name="required"/>
+                <msg key="errors.campo.numerico" name="integer"/>
 
-                <arg name="required" key="${var:campoNumero}" position="0" resource="false" />
-                <arg name="integer" key="${var:campoNumero}" position="0" resource="false" />
+                <arg name="required" key="${var:campoNumero}" position="0" resource="false"/>
+                <arg name="integer" key="${var:campoNumero}" position="0" resource="false"/>
 
                 <var>
                     <var-name>campoNumero</var-name>
@@ -33,9 +33,9 @@
             </field>
 
             <field property="tipoTelefone" depends="required">
-                <msg key="errors.campo.requirido" name="required" />
+                <msg key="errors.campo.requirido" name="required"/>
 
-                <arg name="required" key="${var:campoTipo}" position="0" resource="false" />
+                <arg name="required" key="${var:campoTipo}" position="0" resource="false"/>
 
                 <var>
                     <var-name>campoTipo</var-name>

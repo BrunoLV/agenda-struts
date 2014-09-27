@@ -14,8 +14,8 @@
             <th><bean:message key="label.table.header.nome"/></th>
         </tr>
         <tr>
-            <td><c:out value="${sessionScope.contatoDetalhado.id}" /></td>
-            <td><c:out value="${sessionScope.contatoDetalhado.nome}" /></td>
+            <td><c:out value="${sessionScope.contatoDetalhado.id}"/></td>
+            <td><c:out value="${sessionScope.contatoDetalhado.nome}"/></td>
         </tr>
     </table>
 </div>

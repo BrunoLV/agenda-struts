@@ -18,7 +18,7 @@
         <font color="blue">
             <logic:messagesPresent message="true">
                 <html:messages id="messages" message="true">
-                    <p class="messages"><bean:write name="messages" /></p>
+                    <p class="messages"><bean:write name="messages"/></p>
                 </html:messages>
             </logic:messagesPresent>
         </font>

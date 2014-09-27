@@ -4,5 +4,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <tiles:insert definition="layout">
-    <tiles:put name="body" value="/pages/cadastro-contato-body.jsp"/>
+    <tiles:put name="body" value="/pages/cadastro-contato-body.jsp" />
 </tiles:insert>

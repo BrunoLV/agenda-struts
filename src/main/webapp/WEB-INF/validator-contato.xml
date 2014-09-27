@@ -8,7 +8,7 @@
         <form name="contatoActionForm">
             <field property="nome" depends="required">
                 <msg name="required" key="errors.campo.requirido"/>
-                <arg name="required" key="${var:campoNome}" position="0" resource="false" />
+                <arg name="required" key="${var:campoNome}" position="0" resource="false"/>
                 <var>
                     <var-name>campoNome</var-name>
                     <var-value>NOME</var-value>

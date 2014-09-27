@@ -8,56 +8,59 @@
 
     <form method="post">
         <button class="buttonAcoes" onclick="javascript:direcionarInclusao();">
-            <bean:message key="label.button.novo" />
+            <bean:message key="label.button.novo"/>
         </button>
         <input type="hidden" id="acao" name="acao">
         <input type="hidden" id="id" name="id">
         <br/><br/>
 
         <font color="blue">
-        <logic:messagesPresent message="true">
-            <html:messages id="messages" message="true">
-                <p class="messages"><bean:write name="messages" /></p>
-            </html:messages>
-            <br/>
-        </logic:messagesPresent>
+            <logic:messagesPresent message="true">
+                <html:messages id="messages" message="true">
+                    <p class="messages"><bean:write name="messages"/></p>
+                </html:messages>
+                <br/>
+            </logic:messagesPresent>
         </font>
 
         <c:if test="${empty contatos}">
             <h4 class="erro"><bean:message key="label.message.empty"/></h4>
         </c:if>
         <c:if test="${not empty contatos}">
-        <table>
-            <tr>
-                <th>
-                    <bean:message key="label.table.header.id"/>
-                </th>
-                <th>
-                    <bean:message key="label.table.header.nome"/>
-                </th>
-            </tr>
-            <c:forEach items="${contatos}" var="contato">
+            <table>
                 <tr>
-                    <td><c:out value="${contato.id}"/></td>
-                    <td><c:out value="${contato.nome}"/></td>
-                    <td>
-                        <button class="buttonAcoes" onclick="javascript:submeterManipulacao('REMOVER', '${contato.id}');">
-                            <bean:message key="label.button.remover"/>
-                        </button>
-                    </td>
-                    <td>
-                        <button class="buttonAcoes" onclick="javascript:submeterManipulacao('EDITAR', '${contato.id}');">
-                            <bean:message key="label.button.editar"/>
-                        </button>
-                    </td>
-                    <td>
-                        <button class="buttonAcoes" onclick="javascript:submeterManipulacao('DETALHAR', '${contato.id}');">
-                            <bean:message key="label.button.detalhar"/>
-                        </button>
-                    </td>
+                    <th>
+                        <bean:message key="label.table.header.id"/>
+                    </th>
+                    <th>
+                        <bean:message key="label.table.header.nome"/>
+                    </th>
                 </tr>
-            </c:forEach>
-        </table>
+                <c:forEach items="${contatos}" var="contato">
+                    <tr>
+                        <td><c:out value="${contato.id}"/></td>
+                        <td><c:out value="${contato.nome}"/></td>
+                        <td>
+                            <button class="buttonAcoes"
+                                    onclick="javascript:submeterManipulacao('REMOVER', '${contato.id}');">
+                                <bean:message key="label.button.remover"/>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="buttonAcoes"
+                                    onclick="javascript:submeterManipulacao('EDITAR', '${contato.id}');">
+                                <bean:message key="label.button.editar"/>
+                            </button>
+                        </td>
+                        <td>
+                            <button class="buttonAcoes"
+                                    onclick="javascript:submeterManipulacao('DETALHAR', '${contato.id}');">
+                                <bean:message key="label.button.detalhar"/>
+                            </button>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </table>
         </c:if>
     </form>
 </div>

@@ -8,26 +8,26 @@
     <h3><bean:message key="label.title.cadastro.contatos"/></h3>
 
     <font color="red">
-        <p class="error"><html:errors /></p>
+        <p class="error"><html:errors/></p>
     </font>
 
     <br/>
     <html:form action="salvar-contato.do" method="post">
-        <html:hidden property="id" value="${contato.id}" />
-        <html:hidden property="acao" value="CADASTRAR" />
+        <html:hidden property="id" value="${contato.id}"/>
+        <html:hidden property="acao" value="CADASTRAR"/>
         <table class="tableForm">
             <tr>
                 <td class="tableForm">
                     <bean:message key="label.form.nome"/>
                 </td>
                 <td class="tableForm">
-                    <html:text styleClass="textForm" property="nome" value="${contato.nome}" />
+                    <html:text styleClass="textForm" property="nome" value="${contato.nome}"/>
                 </td>
             </tr>
         </table>
         <br/>
         <html:submit styleClass="buttonAcoes">
-            <bean:message key="label.button.salvar" />
+            <bean:message key="label.button.salvar"/>
         </html:submit>
     </html:form>
 </div>

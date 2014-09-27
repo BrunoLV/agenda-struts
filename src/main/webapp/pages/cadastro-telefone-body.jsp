@@ -8,21 +8,21 @@
     <h3><bean:message key="label.title.cadastro.telefones"/></h3>
 
     <font color="red">
-        <p class="error"><html:errors /></p>
+        <p class="error"><html:errors/></p>
     </font>
 
     <br/>
     <html:form action="salvar-telefone.do" method="post">
-        <html:hidden property="id" value="${telefone.id}" />
-        <html:hidden property="idContato" value="${sessionScope.contatoDetalhado.id}" />
-        <html:hidden property="acao" value="CADASTRAR" />
+        <html:hidden property="id" value="${telefone.id}"/>
+        <html:hidden property="idContato" value="${sessionScope.contatoDetalhado.id}"/>
+        <html:hidden property="acao" value="CADASTRAR"/>
         <table class="tableForm">
             <tr>
                 <td class="tableForm">
                     <bean:message key="label.form.codigo"/>
                 </td>
                 <td class="tableForm">
-                    <html:text styleClass="textForm" property="codigo" value="${telefone.codigo}" />
+                    <html:text styleClass="textForm" property="codigo" value="${telefone.codigo}"/>
                 </td>
             </tr>
             <tr>
@@ -30,7 +30,7 @@
                     <bean:message key="label.form.numero"/>
                 </td>
                 <td class="tableForm">
-                    <html:text styleClass="textForm" property="numero" value="${telefone.numero}" />
+                    <html:text styleClass="textForm" property="numero" value="${telefone.numero}"/>
                 </td>
             </tr>
             <tr>
@@ -52,17 +52,17 @@
                     <!-- Fim -->
 
                     <html:select property="tipoTelefone" styleClass="textForm">
-                        <html:option key="label.option.selecione" value="" />
-                        <html:option key="label.option.residencial" value="${opcaoResidencial}" />
-                        <html:option key="label.option.celular" value="${opcaoCelular}" />
-                        <html:option key="label.option.comercial" value="${opcaoComercial}" />
+                        <html:option key="label.option.selecione" value=""/>
+                        <html:option key="label.option.residencial" value="${opcaoResidencial}"/>
+                        <html:option key="label.option.celular" value="${opcaoCelular}"/>
+                        <html:option key="label.option.comercial" value="${opcaoComercial}"/>
                     </html:select>
                 </td>
             </tr>
         </table>
         <br/>
         <html:submit styleClass="buttonAcoes">
-            <bean:message key='label.button.salvar' />
+            <bean:message key='label.button.salvar'/>
         </html:submit>
     </html:form>
 </div>

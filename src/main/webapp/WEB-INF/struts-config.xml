@@ -18,7 +18,7 @@
         <exception type="java.lang.Exception"
                    key="errors.global.mesage"
                    handler="com.valhala.agenda.web.handlers.CustomExceptionHandler"
-                   path="/pages-tiles/pagina-erro.jsp" />
+                   path="/pages-tiles/pagina-erro.jsp"/>
     </global-exceptions>
 
     <!-- Configuração das Actions -->
@@ -95,7 +95,7 @@
                 type="com.valhala.agenda.web.action.ManipulacaoTelefonesAction"
                 name="telefoneActionForm"
                 validate="false">
-            <forward name="PREPARACAO_SUCESSO" path="/pages-tiles/cadastro-telefones.jsp" />
+            <forward name="PREPARACAO_SUCESSO" path="/pages-tiles/cadastro-telefones.jsp"/>
         </action>
 
     </action-mappings>
