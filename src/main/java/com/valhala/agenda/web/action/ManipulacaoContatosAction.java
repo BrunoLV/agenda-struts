@@ -34,8 +34,6 @@ public class ManipulacaoContatosAction extends Action {
 
         String forward = null;
 
-        System.out.println(actionForm.getAcao());
-
         SqlSession session = (SqlSession) request.getAttribute("sessaoBanco");
         ContatoBusiness business = new ContatoBusiness(session);
         TelefoneBusiness telefoneBusiness = new TelefoneBusiness(session);

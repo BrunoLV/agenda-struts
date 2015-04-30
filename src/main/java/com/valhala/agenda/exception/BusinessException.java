@@ -5,7 +5,9 @@ package com.valhala.agenda.exception;
  */
 public class BusinessException extends Exception {
 
-    public BusinessException() {
+	private static final long serialVersionUID = -5074284007667018961L;
+
+	public BusinessException() {
         super();
     }
 
