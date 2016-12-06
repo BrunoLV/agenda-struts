@@ -14,16 +14,17 @@ import java.util.List;
 
 public class ListagemContatosAction extends Action {
 
-    @Override
-    public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request, HttpServletResponse response) throws Exception {
+	@Override
+	public ActionForward execute(ActionMapping mapping, ActionForm form, HttpServletRequest request,
+			HttpServletResponse response) throws Exception {
 
-        SqlSession session = (SqlSession) request.getAttribute("sessaoBanco");
-        ContatoBusiness business = new ContatoBusiness(session);
+		SqlSession session = (SqlSession) request.getAttribute("sessaoBanco");
+		ContatoBusiness business = new ContatoBusiness(session);
 
-        List<Contato> contatos = business.listarTodosContatos();
-        request.setAttribute("contatos", contatos);
+		List<Contato> contatos = business.listarTodosContatos();
+		request.setAttribute("contatos", contatos);
 
-        return mapping.findForward("SUCESSO");
-    }
+		return mapping.findForward("SUCESSO");
+	}
 
 }

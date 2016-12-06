@@ -16,15 +16,16 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class CustomExceptionHandler extends ExceptionHandler {
 
-    private static final Logger LOGGER = Logger.getLogger(CustomExceptionHandler.class);
+	private static final Logger LOGGER = Logger.getLogger(CustomExceptionHandler.class);
 
-    @Override
-    public ActionForward execute(Exception ex, ExceptionConfig ae, ActionMapping mapping, ActionForm formInstance, HttpServletRequest request, HttpServletResponse response) throws ServletException {
+	@Override
+	public ActionForward execute(Exception ex, ExceptionConfig ae, ActionMapping mapping, ActionForm formInstance,
+			HttpServletRequest request, HttpServletResponse response) throws ServletException {
 
-        LOGGER.error(String.format("Ocorreu um erro durante a execução da ação. Erro: %s", ex.getMessage()), ex);
+		LOGGER.error(String.format("Ocorreu um erro durante a execução da ação. Erro: %s", ex.getMessage()), ex);
 
-        request.setAttribute("mensagem", ex.getMessage());
-        return super.execute(ex, ae, mapping, formInstance, request, response);
-    } // fim do metodo execute
+		request.setAttribute("mensagem", ex.getMessage());
+		return super.execute(ex, ae, mapping, formInstance, request, response);
+	} // fim do metodo execute
 
 } // fim da classe CustomExceptionHandler

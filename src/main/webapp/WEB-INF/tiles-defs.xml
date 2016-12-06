@@ -8,9 +8,14 @@
         <put name="header" value="/template/header.jsp"/>
         <put name="footer" value="/template/footer.jsp"/>
         <putList name="styleSheets">
-            <add value="/css/estilo.css"/>
+        	<add value="/css/bootstrap.min.css"/>
+        	<add value="/css/ie10-viewport-bug-workaround"/>
+        	<add value="/css/stick-footer.css"/>
         </putList>
         <putList name="javaScripts">
+            <add value="/script/jquery.min.js"/>
+        	<add value="/script/bootstrap.min.js"/>
+        	<add value="/script/ie10-viewport-bug-workaround.js"/>
             <add value="/script/scripts.js"/>
         </putList>
     </definition>
@@ -19,9 +24,14 @@
         <put name="header" value="/template/header.jsp"/>
         <put name="footer" value="/template/footer.jsp"/>
         <putList name="styleSheets">
-            <add value="/css/estilo.css"/>
+            <add value="/css/bootstrap.min.css"/>
+        	<add value="/css/ie10-viewport-bug-workaround.css"/>
+        	<add value="/css/stick-footer.css"/>
         </putList>
         <putList name="javaScripts">
+        	<add value="/script/jquery.min.js"/>
+        	<add value="/script/bootstrap.min.js"/>
+        	<add value="/script/ie10-viewport-bug-workaround.js"/>
             <add value="/script/scripts.js"/>
         </putList>
     </definition>

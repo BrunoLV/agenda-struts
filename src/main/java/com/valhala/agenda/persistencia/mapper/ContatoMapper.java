@@ -6,18 +6,18 @@ import java.util.List;
 
 public interface ContatoMapper {
 
-    void inserirContato(Contato contato);
+	void inserirContato(Contato contato);
 
-    void atualizarContato(Contato contato);
+	void atualizarContato(Contato contato);
 
-    void removerContato(Integer id);
+	void removerContato(Integer id);
 
-    List<Contato> buscarTodosContatos();
+	List<Contato> buscarTodosContatos();
 
-    Contato buscarContatoPorIdSemRelacionamento(Integer id);
+	Contato buscarContatoPorIdSemRelacionamento(Integer id);
 
-    Contato buscarConstatosPorIdComRelacionamento(Integer id);
+	Contato buscarConstatosPorIdComRelacionamento(Integer id);
 
-    Contato buscarContatoPorIdRelacionamentoFull(Integer id);
+	Contato buscarContatoPorIdRelacionamentoFull(Integer id);
 
 }
