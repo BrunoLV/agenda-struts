@@ -42,3 +42,7 @@ function direcionarInclusaoTelefone() {
     document.forms['listagemTelefones'].setAttribute('action', 'novo-telefone.do')
     document.forms['listagemTelefones'].submit();
 }
+
+$(document).ready(function(){
+	$('[data-toggle="tooltip"]').tooltip();
+});

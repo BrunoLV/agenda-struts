@@ -25,7 +25,8 @@
 				</logic:messagesPresent>
 
 				<button class="btn btn-primary"
-					onclick="javascript:direcionarInclusaoTelefone();">
+					onclick="javascript:direcionarInclusaoTelefone();"
+					data-toggle="tooltip" title="Novo">
 					<span class="glyphicon glyphicon-plus"></span>
 				</button>
 
@@ -56,13 +57,15 @@
 								<td>${telefone.tipo}</td>
 								<td style="width: 5%">
 									<button class="btn btn-danger"
-										onclick="javascript:submeterManipulacaoTelefone('REMOVER', '${telefone.id}');">
+										onclick="javascript:submeterManipulacaoTelefone('REMOVER', '${telefone.id}');"
+										data-toggle="tooltip" title="Remover">
 										<span class="glyphicon glyphicon-trash"></span>
 									</button>
 								</td>
 								<td style="width: 5%">
 									<button class="btn btn-default"
-										onclick="javascript:submeterManipulacaoTelefone('EDITAR', '${telefone.id}');">
+										onclick="javascript:submeterManipulacaoTelefone('EDITAR', '${telefone.id}');"
+										data-toggle="tooltip" title="Editar">
 										<span class="glyphicon glyphicon-pencil"></span>
 									</button>
 								</td>

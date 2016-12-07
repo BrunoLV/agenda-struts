@@ -32,7 +32,7 @@
 						</div>
 					</div>
 				</div>
-				<button type="submit" class="btn btn-primary">
+				<button type="submit" class="btn btn-primary" data-toggle="tooltip" title="Salvar">
 					<span class="glyphicon glyphicon-floppy-disk"></span>
 				</button>
 			</html:form>

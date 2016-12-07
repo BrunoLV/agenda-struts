@@ -20,7 +20,7 @@
 				</html:messages>
 			</logic:messagesPresent>
 		
-			<button class="btn btn-primary" onclick="javascript:direcionarInclusao();">
+			<button class="btn btn-primary" onclick="javascript:direcionarInclusao();" data-toggle="tooltip" title="Novo">
 				<span class="glyphicon glyphicon-plus"></span>
 			</button>
 			
@@ -47,17 +47,17 @@
 							<td><c:out value="${contato.id}" /></td>
 							<td><c:out value="${contato.nome}" /></td>
 							<td style="width: 5%">
-								<button class="btn btn-danger" onclick="javascript:submeterManipulacao('REMOVER', '${contato.id}');">
+								<button class="btn btn-danger" onclick="javascript:submeterManipulacao('REMOVER', '${contato.id}');" data-toggle="tooltip" title="Remover">
 									<span class="glyphicon glyphicon-trash"></span>
 								</button>
 							</td>
 							<td style="width: 5%">
-								<button class="btn btn-default" onclick="javascript:submeterManipulacao('EDITAR', '${contato.id}');">
+								<button class="btn btn-default" onclick="javascript:submeterManipulacao('EDITAR', '${contato.id}');" data-toggle="tooltip" title="Editar">
 									<span class="glyphicon glyphicon-pencil"></span>
 								</button>
 							</td>
 							<td style="width: 5%">
-								<button class="btn btn-success" onclick="javascript:submeterManipulacao('DETALHAR', '${contato.id}');">
+								<button class="btn btn-success" onclick="javascript:submeterManipulacao('DETALHAR', '${contato.id}');" data-toggle="tooltip" title="Detalhes">
 									<span class="glyphicon glyphicon-list"></span>
 								</button>
 							</td>

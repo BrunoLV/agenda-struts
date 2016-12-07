@@ -43,8 +43,8 @@
                 name="contatoActionForm"
                 validate="true"
                 input="/pages-tiles/cadastro-contato.jsp">
-            <forward name="INSERCAO_SUCESSO" path="/listar.do"/>
-            <forward name="EDICAO_SUCESSO" path="/listar.do"/>
+            <forward name="INSERCAO_SUCESSO" path="/listar.do" redirect="true"/>
+            <forward name="EDICAO_SUCESSO" path="/listar.do" redirect="true"/>
         </action>
 
         <action path="/editar-contato"
@@ -80,8 +80,8 @@
                 name="telefoneActionForm"
                 validate="true"
                 input="/pages-tiles/cadastro-telefones.jsp">
-            <forward name="INSERCAO_SUCESSO" path="/pages-tiles/detalhe-contato.jsp"/>
-            <forward name="EDICAO_SUCESSO" path="/pages-tiles/detalhe-contato.jsp"/>
+            <forward name="INSERCAO_SUCESSO" path="/detalhar-contato.do" redirect="true"/>
+            <forward name="EDICAO_SUCESSO" path="/detalhar-contato.do" redirect="true"/>
         </action>
 
         <action path="/remover-telefone"
@@ -112,8 +112,8 @@
     <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
         <set-property property="pathnames"
                       value="/WEB-INF/validator-rules.xml,
-                      /WEB-INF/validator-contato.xml,
-                      /WEB-INF/validator-telefone.xml"/>
+                      		 /WEB-INF/validator-contato.xml,
+                      		 /WEB-INF/validator-telefone.xml"/>
     </plug-in>
 
 </struts-config>
