@@ -8,5 +8,5 @@
 			  username="root" 
 			  password="root" 
 			  driverClassName="com.mysql.jdbc.Driver"
-			  url="jdbc:mysql://localhost:3306/agenda_struts" />
+			  url="jdbc:mysql://localhost:3306/agenda" />
 </Context>

@@ -4,35 +4,35 @@
         "http://struts.apache.org/dtds/tiles-config_1_3.dtd">
 
 <tiles-definitions>
-    <definition name="layout" template="/template/layout.jsp">
-        <put name="header" value="/template/header.jsp"/>
-        <put name="footer" value="/template/footer.jsp"/>
-        <putList name="styleSheets">
-        	<add value="/css/bootstrap.min.css"/>
-        	<add value="/css/ie10-viewport-bug-workaround"/>
-        	<add value="/css/stick-footer.css"/>
-        </putList>
-        <putList name="javaScripts">
-            <add value="/script/jquery.min.js"/>
-        	<add value="/script/bootstrap.min.js"/>
-        	<add value="/script/ie10-viewport-bug-workaround.js"/>
-            <add value="/script/scripts.js"/>
-        </putList>
-    </definition>
+	<definition name="layout" template="/WEB-INF/template/layout.jsp">
+		<put name="header" value="/WEB-INF/template/header.jsp" />
+		<put name="footer" value="/WEB-INF/template/footer.jsp" />
+		<putList name="styleSheets">
+			<add value="/resources/css/bootstrap.min.css" />
+			<add value="/resources/css/ie10-viewport-bug-workaround" />
+			<add value="/resources/css/stick-footer.css" />
+		</putList>
+		<putList name="javaScripts">
+			<add value="/resources/script/jquery.min.js" />
+			<add value="/resources/script/bootstrap.min.js" />
+			<add value="/resources/script/ie10-viewport-bug-workaround.js" />
+			<add value="/resources/script/scripts.js" />
+		</putList>
+	</definition>
 
-    <definition name="layout-detalhe-contato" template="/template/layout-detalhe-contato.jsp">
-        <put name="header" value="/template/header.jsp"/>
-        <put name="footer" value="/template/footer.jsp"/>
-        <putList name="styleSheets">
-            <add value="/css/bootstrap.min.css"/>
-        	<add value="/css/ie10-viewport-bug-workaround.css"/>
-        	<add value="/css/stick-footer.css"/>
-        </putList>
-        <putList name="javaScripts">
-        	<add value="/script/jquery.min.js"/>
-        	<add value="/script/bootstrap.min.js"/>
-        	<add value="/script/ie10-viewport-bug-workaround.js"/>
-            <add value="/script/scripts.js"/>
-        </putList>
-    </definition>
+	<definition name="layout-detalhe-contato" template="/WEB-INF/template/layout-detalhe-contato.jsp">
+		<put name="header" value="/WEB-INF/template/header.jsp" />
+		<put name="footer" value="/WEB-INF/template/footer.jsp" />
+		<putList name="styleSheets">
+			<add value="/resources/css/bootstrap.min.css" />
+			<add value="/resources/css/ie10-viewport-bug-workaround.css" />
+			<add value="/resources/css/stick-footer.css" />
+		</putList>
+		<putList name="javaScripts">
+			<add value="/resources/script/jquery.min.js" />
+			<add value="/resources/script/bootstrap.min.js" />
+			<add value="/resources/script/ie10-viewport-bug-workaround.js" />
+			<add value="/resources/script/scripts.js" />
+		</putList>
+	</definition>
 </tiles-definitions>

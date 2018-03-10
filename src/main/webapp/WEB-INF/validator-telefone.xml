@@ -4,44 +4,49 @@
         "http://jakarta.apache.org/commons/dtds/validator_1_3_0.dtd">
 
 <form-validation>
-    <formset>
-        <form name="telefoneActionForm">
-            <field property="codigo" depends="required, integer">
-                <msg key="errors.campo.requirido" name="required"/>
-                <msg key="errors.campo.numerico" name="integer"/>
+	<formset>
+		<form name="telefoneActionForm">
+			<field property="ddd" depends="required, integer">
+				<msg key="errors.campo.requirido" name="required" />
+				<msg key="errors.campo.numerico" name="integer" />
 
-                <arg name="required" key="${var:campoCodigo}" position="0" resource="false"/>
-                <arg name="integer" key="${var:campoCodigo}" position="0" resource="false"/>
+				<arg name="required" key="${var:campoCodigo}" position="0"
+					resource="false" />
+				<arg name="integer" key="${var:campoCodigo}" position="0"
+					resource="false" />
 
-                <var>
-                    <var-name>campoCodigo</var-name>
-                    <var-value>CODIGO</var-value>
-                </var>
-            </field>
+				<var>
+					<var-name>campoCodigo</var-name>
+					<var-value>DDD</var-value>
+				</var>
+			</field>
 
-            <field property="numero" depends="required, integer">
-                <msg key="errors.campo.requirido" name="required"/>
-                <msg key="errors.campo.numerico" name="integer"/>
+			<field property="numero" depends="required, integer">
+				<msg key="errors.campo.requirido" name="required" />
+				<msg key="errors.campo.numerico" name="integer" />
 
-                <arg name="required" key="${var:campoNumero}" position="0" resource="false"/>
-                <arg name="integer" key="${var:campoNumero}" position="0" resource="false"/>
+				<arg name="required" key="${var:campoNumero}" position="0"
+					resource="false" />
+				<arg name="integer" key="${var:campoNumero}" position="0"
+					resource="false" />
 
-                <var>
-                    <var-name>campoNumero</var-name>
-                    <var-value>NUMERO</var-value>
-                </var>
-            </field>
+				<var>
+					<var-name>campoNumero</var-name>
+					<var-value>NUMERO</var-value>
+				</var>
+			</field>
 
-            <field property="tipoTelefone" depends="required">
-                <msg key="errors.campo.requirido" name="required"/>
+			<field property="tipoTelefone" depends="required">
+				<msg key="errors.campo.requirido" name="required" />
 
-                <arg name="required" key="${var:campoTipo}" position="0" resource="false"/>
+				<arg name="required" key="${var:campoTipo}" position="0"
+					resource="false" />
 
-                <var>
-                    <var-name>campoTipo</var-name>
-                    <var-value>TIPO</var-value>
-                </var>
-            </field>
-        </form>
-    </formset>
+				<var>
+					<var-name>campoTipo</var-name>
+					<var-value>TIPO</var-value>
+				</var>
+			</field>
+		</form>
+	</formset>
 </form-validation>

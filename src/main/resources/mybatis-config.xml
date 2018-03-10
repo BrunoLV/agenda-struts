@@ -8,8 +8,8 @@
 	<properties resource="jdbc.properties" />
 
 	<typeAliases>
-		<typeAlias alias="Contato" type="com.valhala.agenda.modelo.Contato" />
-		<typeAlias alias="Telefone" type="com.valhala.agenda.modelo.Telefone" />
+		<typeAlias alias="Contato" type="br.com.valhala.agenda.modelo.Contato" />
+		<typeAlias alias="Telefone" type="br.com.valhala.agenda.modelo.Telefone" />
 	</typeAliases>
 
 	<environments default="development">
